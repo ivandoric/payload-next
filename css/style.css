@@ -1,0 +1,102 @@
+html, body {
+  font-family: system-ui, Segoe UI, Helvetica Neue, Arial;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: var(--color-dark-gray);
+}
+
+:root {
+  --max-width-s : 640px;
+  --max-width-m : 1024px;
+  --max-width-l : 1440px;
+
+  --baseline : 30px;
+
+  --color-dark-gray: #212121;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+h1 { font-size: 80px; }
+
+h2 { font-size: 60px; }
+
+h3 { font-size: 40px; }
+
+h4 { font-size: 30px; }
+
+h5 { font-size: 25px; }
+
+h6 { font-size: 20px; }
+
+@media (max-width: 1024px) {
+  h1 { font-size: 50px; }
+
+  h2 { font-size: 35px; }
+
+  h3 { font-size: 30px; }
+
+  h4 { font-size: 25px; }
+
+  h5 { font-size: 20px; }
+
+  h6 { font-size: 18px; }
+}
+
+.products-page {
+  background: #000000;
+  padding-top: 1px;
+  padding-bottom: 60px;
+  color: #ffffff
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-list, .sub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-list h3 {
+  font-size: 24px;
+  margin: 0 0 40px;
+}
+
+.product-list strong {
+  display: block;
+}
+
+.product-list strong.price {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.product-item {
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  background: #0a0a0a;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.sub-list {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sub-list li {
+  margin-right: 20px;
+}

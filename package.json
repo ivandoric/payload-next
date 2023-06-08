@@ -1,0 +1,55 @@
+{
+  "name": "payload-nextjs-server",
+  "description": "A boilerplate project for NextJS with Payload CMS",
+  "keywords": [
+    "payload",
+    "cms",
+    "nextjs"
+  ],
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "author": "TRBL",
+  "scripts": {
+    "build:next": "next build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:payload": "payload build",
+    "copyfiles:media": "copyfiles -u 1 media/**/*.{svg,jpg,png} dist/media",
+    "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles:media && yarn build:next",
+    "dev": "ts-node server.ts",
+    "seed": "ts-node seed/index.js",
+    "serve": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/server.js",
+    "generate:types": "PAYLOAD_CONFIG_PATH=./payload.config.ts payload generate:types"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "dotenv": "^16.0.0",
+    "escape-html": "^1.0.3",
+    "express": "^4.18.0",
+    "next": "^13.2.3",
+    "payload": "^1.7.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.52.0",
+    "slate": "^0.72.8",
+    "typescript": "^4.7.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@trbl/eslint-config": "^1.2.4",
+    "@types/express": "^4.17.11",
+    "@types/react": "^16.9.56",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.11.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.16.0",
+    "eslint-plugin-jest-dom": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "ts-node": "^10.8.0"
+  }
+}
